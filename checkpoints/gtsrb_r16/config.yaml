@@ -1,0 +1,23 @@
+run_name: ${model.name}_${data.name}_${task.name}
+adapter_save_name: adapter
+decoder_save_name: decoder.pt
+device: auto
+model:
+  id: openai/clip-vit-base-patch32
+  name: clip_vit_b_32
+  cliphead_dir: checkpoints/clipheads/ViT-B-32-CLIP
+  input_size: 224
+task:
+  name: classification
+  src: image
+  tgt: label
+data:
+  name: gtsrb
+  data_path: data/8vision/gtsrb
+  val_fraction: 0.2
+  cliphead_name: gtsrb_head.pt
+dataloader:
+  train_batch_size: 32
+  train_num_workers: 4
+  val_batch_size: 32
+  val_num_workers: 4
