@@ -1,0 +1,58 @@
+[tool.ruff]
+# Directories to include
+src = ["."]
+exclude = ["outputs", "checkpoints", "wandb", "venv", ".env", ".git"]
+
+# Line length for formatting
+line-length = 100
+
+# Enable common rule sets (aliases for full rule lists)
+lint.select = ["E", "F", "W", "I", "N", "UP", "B", "C90"]
+
+# You can disable specific rules if needed
+lint.ignore = [
+  "N812",  # variable name in lowercase
+  "N801",  # class name should use CamelCase
+  "N806",  # Uppercase variable name
+  "N999",  # class name can be flexible
+  "B008",  # function call in default arg (common in argparse)
+  "B905",  # Not necessary to use strict in zip
+  "UP015", # open "r" is fine
+  "UP031", # Format string with f-string
+  "C901",
+  "I001",
+]
+
+# Enable automatic fixing (optional)
+fix = true
+
+# Target Python version
+target-version = "py311"
+
+[tool.ruff.format]
+# Optional: auto-format like Black
+quote-style = "double"
+indent-style = "space"
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+  "build",
+  "dist",
+  ".venv",
+  "tests",
+  "**/__pycache__",
+  ".git",
+  "data",
+  "checkpoints",
+  "outputs",
+  "configs",
+  "notebooks",
+  "experiments",
+]
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+typeCheckingMode = "basic"
+useLibraryCodeForTypes = true
+pythonVersion = "3.11"
