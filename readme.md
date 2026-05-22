@@ -1,6 +1,8 @@
 # Preference-Aligned LoRA Merging: Preserving Subspace Coverage and Addressing Directional Anisotropy [CVPR 2026]
 
-**Official PyTorch implementation of [*Preference-Aligned LoRA Merging: Preserving Subspace Coverage and Addressing Directional Anisotropy*] [CVPR 2026].**
+[![arXiv](https://img.shields.io/badge/arXiv-2603.26299-b31b1b.svg)](https://arxiv.org/abs/2603.26299)
+
+**Official PyTorch implementation of [*Preference-Aligned LoRA Merging: Preserving Subspace Coverage and Addressing Directional Anisotropy*](https://arxiv.org/abs/2603.26299) [CVPR 2026].**
 
 Wooseong Jeong\* & Wonyoung Lee\* & Kuk-Jin Yoon, Korea Advanced Institute of Science and Technology (KAIST)
 
